@@ -3,34 +3,16 @@ package com.hk.vmLifecycle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.util.Log.INFO
-import android.widget.Button
-import com.hk.vmLifecycle.databinding.ActivityFirstBinding
 
-class FirstActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
 
-    val TAG = "FirstActivity"
-    lateinit var btnSecondActivity : Button
-    /**
-     * It fires when the system first creates the activity. We must perform the basic application startup logic that should happen
-     * only once for the entire lifetime of the activity. Bind data to lists, associate the activity with the viewModel.
-     *
-     * When your activity is recreated after it was previously destroyed, you can recover your saved
-     * instance state from the Bundle that the system passes to your activity. Both the onCreate()
-     * and onRestoreInstanceState() callback methods receive the same Bundle that contains the
-     * instance state information.Because the onCreate() method is called whether the system is
-     * creating a new instance of your activity or recreating a previous one, you must check
-     * whether the state Bundle is null before you attempt to read it. If it is null, then the
-     * system is creating a new instance of the activity, instead of restoring a previous one that was destroyed.
-     */
+    val TAG = "SecondActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "OnCreate")
         println("The saved Instance is - ${savedInstanceState?.getString("vishMon")}")
-        setContentView(R.layout.activity_first)
-        btnSecondActivity = findViewById(R.id.btn_second_activity)
+        setContentView(R.layout.activity_second)
     }
 
     /**
@@ -71,11 +53,6 @@ class FirstActivity : AppCompatActivity() {
         super.onResume()
         Log.d(TAG, "onResume")
 
-        btnSecondActivity.setOnClickListener {
-            println("button pressed")
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     /**
@@ -130,4 +107,5 @@ class FirstActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d(TAG, "onDestroy")
     }
+
 }
