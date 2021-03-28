@@ -7,12 +7,15 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.util.Log.INFO
 import android.widget.Button
+import com.hk.vmLifecycle.LaunchModes.A
 import com.hk.vmLifecycle.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
 
     val TAG = "FirstActivity"
     lateinit var btnSecondActivity : Button
+    lateinit var btnA: Button
+
     /**
      * It fires when the system first creates the activity. We must perform the basic application startup logic that should happen
      * only once for the entire lifetime of the activity. Bind data to lists, associate the activity with the viewModel.
@@ -31,6 +34,7 @@ class FirstActivity : AppCompatActivity() {
         println("The saved Instance is - ${savedInstanceState?.getString("vishMon")}")
         setContentView(R.layout.activity_first)
         btnSecondActivity = findViewById(R.id.btn_second_activity)
+        btnA = findViewById(R.id.btn_a_activity)
     }
 
     /**
@@ -74,6 +78,11 @@ class FirstActivity : AppCompatActivity() {
         btnSecondActivity.setOnClickListener {
             println("button pressed")
             val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+        btnA.setOnClickListener {
+            println("button pressed")
+            val intent = Intent(this, A::class.java)
             startActivity(intent)
         }
     }

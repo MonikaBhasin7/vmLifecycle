@@ -39,4 +39,31 @@ package com.hk.vmLifecycle
 2021-03-28 02:15:52.257 27087-27087/com.hk.vmLifecycle D/SecondActivity: onStop
 2021-03-28 02:15:52.258 27087-27087/com.hk.vmLifecycle D/SecondActivity: onDestroy
 
+
+
+
+
+
+Launch Modes -
+    1. Standard -This is the default launch mode of activity. If you don’t set any launch mode to your activity, it will use the standard mode by default. It creates a new instance of activity every time even if activity instance is already present.
+                 Suppose we have A, B, C, and D activities and your activity B has standard launch mode. Now again launching activity B
+                 State of Activity Stack before launch B
+                 A →B→ C→D
+                 State of Activity Stack after launch B
+                 A → B → C→D→ B
+                 We can see that new instance of B is created again.
+
+
+    2. Single Top - If an instance of activity already exists at the top of the current task, a new instance
+                    will not be created and the Android system will route the intent information through onNewIntent().
+                    If an instance is not present on top of the task then a new instance will be created.
+                    Suppose we have A, B, C, and D activities. A →B →C →D
+                    If we launch C then a new instance of C will be created as it is not on top.
+                    So it will look like A →B →C →D →C
+                    Now suppose we have A →B →C →D →C like this
+                    then we if again launch C activity then in this case new instance will not be created.
+                    Instead, we will receive the callback on onNewIntent() method.
+
+
+
 */
