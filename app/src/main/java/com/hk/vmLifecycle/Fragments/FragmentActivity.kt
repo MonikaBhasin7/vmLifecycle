@@ -34,6 +34,8 @@ class FragmentActivity : AppCompatActivity(), View.OnClickListener {
         dataBinding.addWithoutBackstack.setOnClickListener(this)
         dataBinding.replaceWithBackstack.setOnClickListener(this)
         dataBinding.replaceWithoutBackstack.setOnClickListener(this)
+        dataBinding.btnRemove.setOnClickListener(this)
+        dataBinding.btnPopBackStack.setOnClickListener(this)
     }
 
     private fun chooseFragment(mode: String) : Fragment? {
@@ -84,6 +86,16 @@ class FragmentActivity : AppCompatActivity(), View.OnClickListener {
                 val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
                 fragmentTransaction.replace(R.id.fragment_container, chooseFragment("replace_without_backstack")!!)
                 fragmentTransaction.commit()
+            }
+
+            R.id.btn_remove -> {
+                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+                fragmentTransaction.remove(fragmentManager.findFragmentById(R.id.fragment_container)!!)
+                fragmentTransaction.commit()
+            }
+
+            R.id.btn_pop_back_stack -> {
+                fragmentManager.popBackStack()
             }
         }
     }
