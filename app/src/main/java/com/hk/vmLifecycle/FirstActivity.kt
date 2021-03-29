@@ -7,6 +7,7 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.util.Log.INFO
 import android.widget.Button
+import com.hk.vmLifecycle.Fragments.FragmentActivity
 import com.hk.vmLifecycle.LaunchModes.A
 import com.hk.vmLifecycle.databinding.ActivityFirstBinding
 
@@ -15,6 +16,7 @@ class FirstActivity : AppCompatActivity() {
     val TAG = "FirstActivity"
     lateinit var btnSecondActivity : Button
     lateinit var btnA: Button
+    lateinit var btnFragmentActivity: Button
 
     /**
      * It fires when the system first creates the activity. We must perform the basic application startup logic that should happen
@@ -35,6 +37,7 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
         btnSecondActivity = findViewById(R.id.btn_second_activity)
         btnA = findViewById(R.id.btn_a_activity)
+        btnFragmentActivity = findViewById(R.id.btn_fragment_activity)
     }
 
     /**
@@ -83,6 +86,10 @@ class FirstActivity : AppCompatActivity() {
         btnA.setOnClickListener {
             println("button pressed")
             val intent = Intent(this, A::class.java)
+            startActivity(intent)
+        }
+        btnFragmentActivity.setOnClickListener {
+            val intent = Intent(this, FragmentActivity::class.java)
             startActivity(intent)
         }
     }

@@ -66,4 +66,67 @@ Launch Modes -
 
 
 
+
+   Add Fragments without Backstack
+   -------------------------------
+2021-03-29 21:32:07.959 23549-23549/com.hk.vmLifecycle D/F-A: onAttach
+2021-03-29 21:32:07.959 23549-23549/com.hk.vmLifecycle D/F-A: onCreate
+2021-03-29 21:32:07.967 23549-23549/com.hk.vmLifecycle D/F-A: onCreateView
+2021-03-29 21:32:07.967 23549-23549/com.hk.vmLifecycle D/F-A: onActivityCreated
+2021-03-29 21:32:07.967 23549-23549/com.hk.vmLifecycle D/F-A: onStart
+2021-03-29 21:32:07.968 23549-23549/com.hk.vmLifecycle D/F-A: onResume
+2021-03-29 21:32:13.591 23549-23549/com.hk.vmLifecycle D/F-B: onAttach
+2021-03-29 21:32:13.591 23549-23549/com.hk.vmLifecycle D/F-B: onCreate
+2021-03-29 21:32:13.597 23549-23549/com.hk.vmLifecycle D/F-B: onCreateView
+2021-03-29 21:32:13.597 23549-23549/com.hk.vmLifecycle D/F-B: onActivityCreated
+2021-03-29 21:32:13.597 23549-23549/com.hk.vmLifecycle D/F-B: onStart
+2021-03-29 21:32:13.597 23549-23549/com.hk.vmLifecycle D/F-B: onResume
+2021-03-29 21:32:22.094 23549-23549/com.hk.vmLifecycle D/F-A: onPause
+2021-03-29 21:32:22.094 23549-23549/com.hk.vmLifecycle D/F-B: onPause
+2021-03-29 21:32:22.709 23549-23549/com.hk.vmLifecycle D/F-A: onStop
+2021-03-29 21:32:22.709 23549-23549/com.hk.vmLifecycle D/F-B: onStop
+2021-03-29 21:32:22.711 23549-23549/com.hk.vmLifecycle D/F-A: onDestroyView
+2021-03-29 21:32:22.712 23549-23549/com.hk.vmLifecycle D/F-A: onDestroy
+2021-03-29 21:32:22.712 23549-23549/com.hk.vmLifecycle D/F-A: onDetach
+2021-03-29 21:32:22.712 23549-23549/com.hk.vmLifecycle D/F-B: onDestroyView
+2021-03-29 21:32:22.713 23549-23549/com.hk.vmLifecycle D/F-B: onDestroy
+2021-03-29 21:32:22.713 23549-23549/com.hk.vmLifecycle D/F-B: onDetach
+
+
+Replace with BackStack
+-----------------------
+
+
+2021-03-29 21:34:04.267 23549-23549/com.hk.vmLifecycle D/F-A: onAttach
+2021-03-29 21:34:04.267 23549-23549/com.hk.vmLifecycle D/F-A: onCreate
+2021-03-29 21:34:04.277 23549-23549/com.hk.vmLifecycle D/F-A: onCreateView
+2021-03-29 21:34:04.278 23549-23549/com.hk.vmLifecycle D/F-A: onActivityCreated
+2021-03-29 21:34:04.278 23549-23549/com.hk.vmLifecycle D/F-A: onStart
+2021-03-29 21:34:04.278 23549-23549/com.hk.vmLifecycle D/F-A: onResume
+2021-03-29 21:34:08.031 23549-23549/com.hk.vmLifecycle D/F-B: onAttach
+2021-03-29 21:34:08.031 23549-23549/com.hk.vmLifecycle D/F-B: onCreate
+2021-03-29 21:34:08.032 23549-23549/com.hk.vmLifecycle D/F-A: onPause
+2021-03-29 21:34:08.032 23549-23549/com.hk.vmLifecycle D/F-A: onStop
+2021-03-29 21:34:08.032 23549-23549/com.hk.vmLifecycle D/F-A: onDestroyView
+2021-03-29 21:34:08.040 23549-23549/com.hk.vmLifecycle D/F-B: onCreateView
+2021-03-29 21:34:08.041 23549-23549/com.hk.vmLifecycle D/F-B: onActivityCreated
+2021-03-29 21:34:08.041 23549-23549/com.hk.vmLifecycle D/F-B: onStart
+2021-03-29 21:34:08.041 23549-23549/com.hk.vmLifecycle D/F-B: onResume
+2021-03-29 21:35:05.395 23549-23549/com.hk.vmLifecycle D/F-B: onPause
+2021-03-29 21:35:05.395 23549-23549/com.hk.vmLifecycle D/F-B: onStop
+2021-03-29 21:35:05.395 23549-23549/com.hk.vmLifecycle D/F-B: onDestroyView
+2021-03-29 21:35:05.397 23549-23549/com.hk.vmLifecycle D/F-B: onDestroy
+2021-03-29 21:35:05.397 23549-23549/com.hk.vmLifecycle D/F-B: onDetach
+2021-03-29 21:35:05.405 23549-23549/com.hk.vmLifecycle D/F-A: onCreateView
+2021-03-29 21:35:05.405 23549-23549/com.hk.vmLifecycle D/F-A: onActivityCreated
+2021-03-29 21:35:05.406 23549-23549/com.hk.vmLifecycle D/F-A: onStart
+2021-03-29 21:35:05.406 23549-23549/com.hk.vmLifecycle D/F-A: onResume
+2021-03-29 21:35:46.399 23549-23549/com.hk.vmLifecycle D/F-A: onPause
+2021-03-29 21:35:46.399 23549-23549/com.hk.vmLifecycle D/F-A: onStop
+2021-03-29 21:35:46.399 23549-23549/com.hk.vmLifecycle D/F-A: onDestroyView
+2021-03-29 21:35:46.400 23549-23549/com.hk.vmLifecycle D/F-A: onDestroy
+2021-03-29 21:35:46.400 23549-23549/com.hk.vmLifecycle D/F-A: onDetach
+
+
+
 */

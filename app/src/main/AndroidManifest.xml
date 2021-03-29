@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VmLifecycle">
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".Fragments.FragmentActivity"></activity>
+        <activity android:name=".BaseActivity" />
         <activity android:name=".LaunchModes.D" />
         <activity android:name=".LaunchModes.C" />
         <activity
